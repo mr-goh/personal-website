@@ -10,6 +10,14 @@ const buttonDesign = document.getElementById('designButton');
 const designContent = document.getElementById('designContent');
 
 buttonProb.addEventListener("click", () => {
+    // if (probContent.classList.contains('hidden')) {
+    //     probContent.classList.remove('hidden');
+    //     probContent.classList.add('visible');
+    // } else {
+    //     probContent.classList.remove('visible');
+    //     probContent.classList.add('hidden');
+    // }
+
     probContent.classList.toggle('hidden');
     dataAnalysisContent.classList.add('hidden');
     interviewContent.classList.add('hidden');
