@@ -12,8 +12,9 @@
        <h1>JONATHAN GOH</h1>
         <div class="intro">
             <p>
-                    Hi, I'm a user researcher with 8+ years of experience using human-centered and data-driven research to solve problems and build delightful products. I got my Master's degree from the Department of Urban Studies and Planning at MIT. 
+                    Hi, I'm a user researcher with 8+ years of experience using human-centered and data-driven research to solve problems and build delightful products.
             </p>
+            <p>I have a Master's degree from the Department of Urban Studies and Planning at MIT. </p>
         </div>
         <div class="section">
             <h2 class="sectionHeading">& PROJECTS</h2>
@@ -184,7 +185,7 @@
                     <p>Finally, we generated a feature importance plot to see which variables contribute the most to the model. Building size as the top predictor is intuitive, as larger buildings require more electricity to operate. Heat types & cooling types are important, but interestingly building temperature baseline (temperature setpoints) is also highly important. Another interesting finding is that buildings without attics require more electricity. This might be explained by the fact that attics help to preserve heat.</p>
                     <p>In conclusion, our prediction model seems satisfactory as we yielded a high test accuracy score while managing to reduce dimensionality. We hope that this model can be utilized by end-users, such as homeowners, architects, builders, and local government, to push the agenda of building electrification as a means of built-environment decarbonization. By identifying key predictors, we can help policymakers to optimize energy consumption–including demand response (DR), demand-side management (DSM), pricing policies, and building regulations.</p>
                 </div>
-                <div id="limitationsContent" class="hidden">
+                <div id="limitationsContent" class="hidden machineLearning">
                     <h2>Limitations</h2>
                     <p>We acknowledge that our dataset does not contain data from Alaska state. This is something that we cannot help with data pre-processing and engineering, as this is related to the data collection itself. Therefore, this model might not accurately predict electricity usage in Alaska. Furthermore, Alaska’s climate is different than the rest of the country. We need to train a new model to predict electricity consumption in Alaska.</p>
                     <p>This dataset also lacks the element of individual behavior. This might be important as it could help address behavioral factors related to energy consumption. This dataset is only limited to residential buildings. Therefore the model is not generalizable to other types of buildings that might be a better target for policy changes. Our model is also limited to the US context only. As different countries have varying geographical conditions, building types, and appliances, we might need to train a different model for each country, given that similar data is available.</p>
@@ -197,28 +198,60 @@
                         pedestrians. Led user-research throughout the product development process, including
                         customer development, concept generation, user testing, and design.
                     </p>
-                    <button id="problemButtonPDD">Problem</button>
-                    <button id="ideationButton">Ideation</button>
-                    <button id="userResearchButton">User Research</button>
-                    <button id="designButtonPDD">Design</button>
-                    <div id="problemContent">
+                    <button id="problemButtonGT">Problem</button>
+                    <button id="ideationButtonGT">Ideation</button>
+                    <button id="researchButtonGT">Prototyping</button>
+                    <button id="designButtonGT">Design</button>
+                    <div id="problemContentGT" class="hidden groceries">
                         <h2>Problem</h2>
-                        <p><strong>Improved grocery transport for urban trekkers</strong></p>
+                        <p>Our team set out to solve the problem of grocery transport for people who do not use a car to get to and from the grocery store.</p>
+                        <img src="images/groceryTransport/problemStats.png">
+                        <p>Together with secondary research in the problem space, we conducted interviews with people who grocery shop regularly to better understand their grocery shopping journey, and needs related to transporting their groceries. We focused on grocery shoppers who make their trips using means other than a motor vehicle.</p>
+                        <img src="images/groceryTransport/userNeeds.png">
+                        <p>After our initial customer discovery research, we developed the following mission statement that outlines the aim of our product and our target user:</p>
+                        <p class="emphasize">Improved grocery transport for urban trekkers</p>
                         <p>We aim to develop a durable, compact, easy-to-carry product that improves the grocery transport experience for urban trekkers who:</p>
-                        <ul>
+                        <ul class="groceryMission">
                             <li>are from small households</li>
                             <li>buy a moderate load of groceries</li>
                             <li>grocery shop frequently</li>
                         </ul>
                     </div>
-                    <div id="ideationContent" class="hidden">
+                    <div id="ideationContent" class="hidden groceries">
                         <h2>Ideation</h2>
+                        <p>After our initial round of user research where we honed in on our target users and their needs, we developed a set of product concepts. We started with a wide range of concepts, but narrowed down to four that encapsulated our target users' key needs.</p>
+                        <img src="images/groceryTransport/collapsibleCart.jpeg">
+                        <img src="images/groceryTransport/compartmentBag.jpeg">
+                        <img src="images/groceryTransport/fabricCart.jpeg">
+                        <img src="images/groceryTransport/robustWheels.jpeg">
+                        <p>Before developing our first prototype, we conducted a survey among our target users to gather data on feature importance and to gather more specific metrics on needs from a grocery transport solution.</p>
                     </div>
-                    <div id="userResearchContent" class="hidden">
-                        <h2>User Research</h2>
+                    <div id="researchContentGT" class="hidden groceries">
+                        <h2>Prototyping</h2>
+                        <p>We user-tested the key assumptions of our product across multiple sprints using different prototype iterations.</p>
+                        <h3>Prototype 1</h3>
+                        <img src="images/groceryTransport/prototype.png">
+                        <div class="userTest">
+                            <img src="images/groceryTransport/prototypeTest.jpeg">
+                            <img src="images/groceryTransport/prototypeTest2.jpeg">
+                        </div>
+                        <h3>Prototype 2</h3>
+                        <img src="images/groceryTransport/prototype2.png">
+                        <img src="images/groceryTransport/prototype2Fold.png">
                     </div>
-                    <div id="designContentPDD" class="hidden">
+                    <div id="designContentGT" class="hidden groceries">
                         <h2>Design</h2>
+                        <p>After multiple rounds of user prototype testing, we arrived at <strong>'CARTI'</strong> our final product prototype.</p>
+                        <img src="images/groceryTransport/finalCart.png">
+                        <img src="images/groceryTransport/finalCartFold.png">
+                        <img src="images/groceryTransport/finalCartRatio.png">
+                        <p>This final iteration meets key needs of our target user along the following dimensions:</p>
+                        <ul>
+                            <li>Overall weight</li>
+                            <li>Folded size to capacity ratio</li>
+                            <li>Comfort</li>
+                        </ul>
+                        <p>And outperforms competitor products across each of these dimensions.</p>
                     </div>
                 <li>Redesigning refugee integration programs in Germany</li>
                     <p>

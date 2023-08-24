@@ -134,6 +134,68 @@ buttonLimitations.addEventListener("click", () => {
     contentLimitations.scrollIntoView({behavior: 'smooth', block: 'center'});
 });
 
+// GROCERY TRANSPORT
+const buttonProblemGT = document.getElementById('problemButtonGT');
+const contentProblemGT = document.getElementById('problemContentGT');
+const buttonIdeation = document.getElementById('ideationButtonGT');
+const contentIdeation = document.getElementById('ideationContent');
+const buttonResearchGT = document.getElementById('researchButtonGT');
+const contentResearchGT = document.getElementById('researchContentGT');
+const buttonDesignGT = document.getElementById('designButtonGT');
+const contentDesignGT = document.getElementById('designContentGT');
+
+buttonProblemGT.addEventListener("click", () => {
+    contentProblemGT.classList.toggle('hidden');
+    contentIdeation.classList.add('hidden');
+    contentResearchGT.classList.add('hidden');
+    contentDesignGT.classList.add('hidden');
+    buttonProblemGT.classList.toggle('active');
+    buttonIdeation.classList.remove('active');
+    buttonResearchGT.classList.remove('active');
+    buttonDesignGT.classList.remove('active');
+    contentProblemGT.scrollTop = 0;
+    contentProblemGT.scrollIntoView({behavior: 'smooth', block: 'center'});
+});
+
+buttonIdeation.addEventListener("click", () => {
+    contentIdeation.classList.toggle('hidden');
+    contentProblemGT.classList.add('hidden');
+    contentResearchGT.classList.add('hidden');
+    contentDesignGT.classList.add('hidden');
+    buttonProblemGT.classList.remove('active');
+    buttonIdeation.classList.toggle('active');
+    buttonResearchGT.classList.remove('active');
+    buttonDesignGT.classList.remove('active');
+    contentIdeation.scrollTop = 0;
+    contentIdeation.scrollIntoView({behavior: 'smooth', block: 'center'});
+});
+
+buttonResearchGT.addEventListener("click", () => {
+    contentIdeation.classList.add('hidden');
+    contentProblemGT.classList.add('hidden');
+    contentResearchGT.classList.toggle('hidden');
+    contentDesignGT.classList.add('hidden');
+    buttonProblemGT.classList.remove('active');
+    buttonIdeation.classList.remove('active');
+    buttonResearchGT.classList.toggle('active');
+    buttonDesignGT.classList.remove('active');
+    contentResearchGT.scrollTop = 0;
+    contentResearchGT.scrollIntoView({behavior: 'smooth', block: 'center'});
+});
+
+buttonDesignGT.addEventListener("click", () => {
+    contentIdeation.classList.add('hidden');
+    contentProblemGT.classList.add('hidden');
+    contentResearchGT.classList.add('hidden');
+    contentDesignGT.classList.toggle('hidden');
+    buttonProblemGT.classList.remove('active');
+    buttonIdeation.classList.remove('active');
+    buttonResearchGT.classList.remove('active');
+    buttonDesignGT.classList.toggle('active');
+    contentDesignGT.scrollTop = 0;
+    contentDesignGT.scrollIntoView({behavior: 'smooth', block: 'center'});
+});
+
 // REFUGEE RESETTLEMENT
 
 const buttonProblemRI = document.getElementById('problemButtonRI');

@@ -46,7 +46,7 @@ ul.projects {
 }
 
 li {
-    font-weight:bold;
+    font-weight:normal;
     margin: 8px 0px 0px 0px;
 }
 
@@ -277,9 +277,70 @@ button:hover {
 
 /* PDD project */
 
-#problemContent p, h2 {
+/* .groceries {
+    height: 400px;
+    width: 98%;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 1px 1px lightgray;
+    border-radius: 16px;
+} */
+
+.groceries p, h2, h3 {
     width:fit-content;
     padding: 4px 16px;
+}
+
+.groceries img {
+    padding: 16px 0px 16px 2%;
+    width: 40%;
+}
+
+.emphasize {
+    font-style: italic;
+}
+
+.groceryMission {
+    font-weight: normal;
+    list-style-type: none;
+    padding-bottom: 2%;
+    padding-left: 2%;
+}
+
+#problemContentGT {
+    height: 400px;
+    width: 98%;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 1px 1px lightgray;
+    border-radius: 16px;
+}
+
+#ideationContent {
+    height: 400px;
+    width: 98%;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 1px 1px lightgray;
+    border-radius: 16px;
+}
+
+#researchContentGT {
+    height: 400px;
+    width: 98%;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 1px 1px lightgray;
+    border-radius: 16px;
+}
+
+#designContentGT {
+    height: 400px;
+    width: 98%;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 1px 1px lightgray;
+    border-radius: 16px;
 }
 
 /* Refugee Integration project */
