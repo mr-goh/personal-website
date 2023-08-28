@@ -15,7 +15,6 @@ h1 {
 p {
     font-weight: lighter;
     margin: 0px 0px 8px 0px;
-    width: 100%;
 }
 
 .intro {
@@ -74,6 +73,7 @@ button:hover {
 
 .projects div {
     font-size: 14px;
+    flex-wrap: wrap;
 }
 
 .hidden {
@@ -100,7 +100,11 @@ button:hover {
 #problemContent p {
     padding: 16px 16px;
     font-size: 14px;
-    width: fit-content;
+    width: 90%;
+}
+
+#problemContent img {
+    width: 90%;
 }
 
 
@@ -115,6 +119,11 @@ button:hover {
 
 #userInterviews p {
     padding: 16px 16px;
+    width: 90%;
+}
+
+#userInterviews img {
+    width: 90%;
 }
 
 #dataAnalysis {
@@ -141,15 +150,7 @@ button:hover {
 }
 
 #dataAnalysis img {
-    width: 600px;
-}
-
-#problemContent img {
-    width: 600px;
-}
-
-#userInterviews img {
-    width: 600px;
+    width: 90%;
 }
 
 #designContent > * {
@@ -171,16 +172,19 @@ button:hover {
     justify-content: space-around;
 }
 
-
-#dataExplorationContent img {
-    width: fit-content;
-    padding: 8px 16px;
+.machineLearning img {
+    width: 90%;
+    padding: 2% 2%;
 }
 
-#modelingContent img {
-    width: 600px;
+.machineLearning p {
+    width: 90%;
+    padding: 2% 2%;
 }
 
+.machineLearning h2, h3 {
+    padding: 2% 2%;
+}
 
 #dataExplorationContent {
     height: 400px;
@@ -191,21 +195,14 @@ button:hover {
     border-radius: 16px;
 }
 
-#dataExplorationContent p {
-    width:fit-content;
-    padding: 4px 16px;
-}
 
 #dataExplorationContent h2 {
-    width:fit-content;
-    padding: 4px 16px;
+    padding: 2% 2%;
 }
 
 #dataExplorationContent h3 {
-    width:fit-content;
-    padding: 16px 16px;
+    padding: 2% 2%;
 }
-
 
 #modelingContent {
     height:400px;
@@ -214,21 +211,6 @@ button:hover {
     background-color: white;
     box-shadow: 1px 1px lightgray;
     border-radius: 16px;
-}
-
-#modelingContent p {
-    width:fit-content;
-    padding: 4px 16px;
-}
-
-#modelingContent h2 {
-    width:fit-content;
-    padding: 4px 16px;
-}
-
-#modelingContent h3 {
-    width:fit-content;
-    padding: 16px 16px;
 }
 
 #findingsContent {
@@ -240,21 +222,6 @@ button:hover {
     border-radius: 16px;
 }
 
-#findingsContent p {
-    width:fit-content;
-    padding: 4px 16px;
-}
-
-#findingsContent h2 {
-    width:fit-content;
-    padding: 4px 16px;
-}
-
-#findingsContent h3 {
-    width:fit-content;
-    padding: 16px 16px;
-}
-
 #limitationsContent {
     height: 400px;
     width: 98%;
@@ -263,17 +230,6 @@ button:hover {
     box-shadow: 1px 1px lightgray;
     border-radius: 16px;
 }
-
-#limitationsContent p, h2 {
-    width:fit-content;
-    padding: 4px 16px;
-}
-
-#limitationsContent h3 {
-    width:fit-content;
-    padding: 16px 16px;
-}
-
 
 /* PDD project */
 
@@ -292,8 +248,8 @@ button:hover {
 }
 
 .groceries img {
-    padding: 16px 0px 16px 2%;
-    width: 40%;
+    padding: 2% 2%;
+    width: 90%;
 }
 
 .emphasize {
@@ -301,8 +257,6 @@ button:hover {
 }
 
 .groceryMission {
-    font-weight: normal;
-    list-style-type: none;
     padding-bottom: 2%;
     padding-left: 2%;
 }
@@ -344,6 +298,14 @@ button:hover {
 }
 
 /* Refugee Integration project */
+
+.refugeeIntegration img {
+    width: 90%;
+}
+
+.fullImg {
+    width: 90%;
+}
 
 #problemContentRI {
     height: fit-content;
@@ -401,12 +363,7 @@ button:hover {
 }
 
 #findingsContentRI > * {
-    width:fit-content;
     padding: 4px 16px;
-}
-
-#findingsContentRI img {
-    width: 40%;
 }
 
 .quote {
