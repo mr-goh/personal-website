@@ -217,7 +217,7 @@ buttonProblemRI.addEventListener("click", () => {
     buttonFindingsRI.classList.remove('active');
     buttonRecommendations.classList.remove('active');
     contentProblemRI.scrollTop = 0;
-    contentProblemRI.scrollIntoView({behavior: 'smooth'});
+    contentProblemRI.scrollIntoView({behavior: 'smooth', block: 'center'});
 });
 
 buttonMethods.addEventListener("click", () => {
@@ -230,7 +230,7 @@ buttonMethods.addEventListener("click", () => {
     buttonFindingsRI.classList.remove('active');
     buttonRecommendations.classList.remove('active');
     contentMethods.scrollTop = 0;
-    contentMethods.scrollIntoView({behavior: 'smooth'});
+    contentMethods.scrollIntoView({behavior: 'smooth', block: 'center'});
 });
 
 buttonFindingsRI.addEventListener("click", () => {
@@ -243,7 +243,7 @@ buttonFindingsRI.addEventListener("click", () => {
     buttonMethods.classList.remove('active');
     buttonRecommendations.classList.remove('active');
     contentFindingsRI.scrollTop = 0;
-    contentFindingsRI.scrollIntoView({behavior: 'smooth'});
+    contentFindingsRI.scrollIntoView({behavior: 'smooth', block: 'center'});
 });
 
 buttonRecommendations.addEventListener("click", () => {
@@ -256,6 +256,6 @@ buttonRecommendations.addEventListener("click", () => {
     buttonMethods.classList.remove('active');
     buttonFindingsRI.classList.remove('active');
     contentRecommendations.scrollTop = 0;
-    contentRecommendations.scrollIntoView({behavior: 'smooth'});
+    contentRecommendations.scrollIntoView({behavior: 'smooth', block: 'center'});
 });
 
