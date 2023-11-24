@@ -243,7 +243,10 @@ button {
     .projectContent {
         display: flex;
         flex-direction: column;
-        height: 90dvh;
+    }
+
+    .projectDetails{
+        height: 100dvh;
     }
 
     .projectSummary {
