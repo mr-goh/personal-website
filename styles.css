@@ -104,7 +104,8 @@ main {
 }
 
 .projectsList hr {
-    width: 60vw;
+    width: calc(100% - 16px);
+    max-width: 800px;
     margin: 16px 0px 0px 0px;
 }
 
@@ -112,7 +113,8 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 60vw;
+    width: calc(100% - 16px);
+    max-width: 800px;
 }
 
 .projectNameYear p {
@@ -131,11 +133,15 @@ main {
     height: 90vh;
 }
 
-.projectHeader {
-}
-
 .projectHeader h2 {
     margin: 20px 0px 24px 0px;
+}
+
+@media screen and (max-width: 480px) {
+    .projectContent {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .projectDetails {
