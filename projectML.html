@@ -29,14 +29,14 @@
             <h4>Response variable</h4>
             <p>We picked net energy consumption in kWh as our response variable. This measures the total energy consumption minus the total on-site energy production.</p>
             <p>The top five contributors to electricity consumption are cooling, plugs, heating, interior lighting, and hot water system. A photovoltaic panel helps offset some consumption, but this is very small compared to the overall consumption.</p>
-            <img src="images/machineLearning/response_distribution.png" class="images">
+            <img src="images/machineLearning/response_distribution.png" class="slides">
             <h4>Predictor variables</h4>
             <img src="images/machineLearning/predictor_map.png" class="images">
             <img src="images/machineLearning/predictor_climateZone.png" class="images">
             <p>The data we have is distributed across the US states, except for Alaska. Most data are in California, Texas, Florida, and New York State. The state with the least data is Wyoming, with 1,106 data points. Most data points are distributed in cold, mixed-humid, and hot-humid climate zone.</p>    
-            <img src="images/machineLearning/predictor_housingType.png" class="images">
+            <img src="images/machineLearning/predictor_housingType.png" class="slides">
             <p>Most homes in the dataset are single-family detached homes. Other types represented in this dataset are mobile homes, multi-family, and single-family attached. In the visualization, we see that multi-family homes tend to consume less net electricity relative to single-family homes. Furthermore, buildings with wooden frames consume less energy than buildings constructed with other materials, except for steel frame buildings with more than 5 units.</p>
-            <img src="images/machineLearning/predictor_cooling.png" class="images">
+            <img src="images/machineLearning/predictor_cooling.png" class="slides">
             <p>We know that air conditioning is the building element that consumes the most electricity on average. Buildings with poor efficiency AC systems, such as SEER 8 and heat pumps, tend to consume more electricity than the average.</p>
             <h3>Modeling</h3>
             <h4>Baseline model</h4>
@@ -72,7 +72,7 @@
                 <li>Mean = 0.8097</li>
                 <li>+/-2 standard deviation = [0.8049, 0.8146]</li>
             </ul>
-            <img src="images/machineLearning/treeDepth.png" class="images">
+            <img src="images/machineLearning/treeDepth.png" class="slides">
             <p>Once we determined our optimal tree depth, we ran the decision tree regression model with a tree depth of 14 on both the training and test datasets, and calculated their accuracy scores.</p>
             <ul>
                 <li>Depth = 14</li>
@@ -97,7 +97,7 @@
                 <li>train_accuracy= 0.9634</li>
                 <li>test_accuracy= 0.8917</li>
             </ul>
-            <img src="images/machineLearning/randomForest.png" class="images">
+            <img src="images/machineLearning/randomForest.png" class="slides">
             <p>We also visualized the feature importance in this model using the mean decrease impurity (MDI). Some important features in this model are building size, heating type, cooling type, vacancy rates, building age, and the number of occupants.</p>
             <h3>Findings</h3>
             <p>We constructed the baseline model using simple linear regression. Despite the relatively high r² score, a model with so many predictors is difficult to interpret. To help with interpretability, we tried reducing the dimensions by checking collinearity and using lasso regularization. These steps help reduce the predictor space while maintaining accuracy, as proven by the negligible decline in r². We also tried checking possible polynomial dimensions in our predictors, but our polynomial model resulted in a lower r² than the baseline. One possible explanation is that we only tried testing a small number of degrees due to our lack of computing power. Further testing with higher polynomial degrees and conducting cross-validation may be needed.</p>

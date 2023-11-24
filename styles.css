@@ -152,21 +152,6 @@ main {
     margin: 20px 0px 24px 0px;
 }
 
-@media screen and (max-width: 480px) {
-    .projectContent {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .projectSummary {
-        display: none;
-    }
-
-    .team {
-        display: none;
-    }
-}
-
 .projectDetails {
     margin: 8px 0px 9px 0px;
     overflow-y: scroll;
@@ -180,7 +165,7 @@ main {
 }
 
 .slides {
-    max-width: 80%;
+    width: 80%;
     height: auto;
     margin: 0px 0px 16px 0px;
 }
@@ -252,4 +237,27 @@ button {
 
 #next-ref {
     right: 10%;
+}
+
+@media screen and (max-width: 480px) {
+    .projectContent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projectSummary {
+        display: none;
+    }
+
+    .team {
+        display: none;
+    }
+
+    .projectHeader {
+        margin: 0px 16px 16px 0px;
+    }
+
+    .slides {
+        width: 100%
+    }
 }
