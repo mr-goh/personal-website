@@ -61,6 +61,10 @@ li {
     margin: 0px 12px 8px 12px;
 }
 
+.year {
+    text-align: right;
+}
+
 nav {
     display: flex;
     flex-direction: row;
