@@ -243,6 +243,7 @@ button {
     .projectContent {
         display: flex;
         flex-direction: column;
+        height: 90dvh;
     }
 
     .projectSummary {
@@ -259,5 +260,13 @@ button {
 
     .slides {
         width: 100%
+    }
+
+    #prev-ref {
+        left: 4px;
+    }
+    
+    #next-ref {
+        right: 4px;
     }
 }
