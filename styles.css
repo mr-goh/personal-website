@@ -239,6 +239,19 @@ button {
     right: 10%;
 }
 
+.contactHeader {
+    margin: 0px 16px 16px 0px;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactDetails a {
+    margin: 0px 0px 24px 0px;
+}
+
 @media screen and (max-width: 480px) {
     .projectContent {
         display: flex;
