@@ -249,6 +249,10 @@ button {
         height: 70dvh;
     }
 
+    .projectDetails h3:first-child {
+        margin: 0px 0px 16px 0px;
+    }
+
     .projectSummary {
         display: none;
     }
