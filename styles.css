@@ -22,6 +22,7 @@ h1 {
 h2 {
     font-size: 32px;
     font-weight: bold;
+    margin-left: 16px 
 }
 
 h3 {
@@ -33,7 +34,7 @@ h3 {
 h4 {
     font-size: 20px;
     font-weight: 200;
-    margin: 24px 0px 16px 0px;
+    margin: 24px 0px 16px 16px;
 }
 
 .subtitle {
@@ -45,7 +46,7 @@ h4 {
 p {
     font-size: 16px;
     font-weight: 100;
-    margin: 8px 12px 8px 0px;
+    margin: 8px 12px 8px 16px;
 }
 
 a {
@@ -75,7 +76,7 @@ nav {
 nav a {
     font-size: 16px;
     font-weight: 100;
-    margin: 12px 24px 12px 0px;
+    margin: 12px 16px 12px 0px;
 }
 
 main {
@@ -85,7 +86,7 @@ main {
 .home {
     font-size: 16px;
     font-weight: 400;
-    margin: 8px 12px;
+    margin: 24px 32px;
 }
 
 .landingHeadline {
@@ -114,14 +115,14 @@ main {
 }
 
 .projectsList a {
-    margin: 4px 12px 4px 0px;
+    margin: 4px 12px 4px 16px;
     font-weight: 200;
 }
 
 .projectsList hr {
     width: calc(100% - 16px);
     max-width: 800px;
-    margin: 16px 0px 0px 0px;
+    margin: 16px 0px 0px 16px;
 }
 
 .projectNameYear {
@@ -211,7 +212,7 @@ button {
 }
 
 #carousel-img {
-    width: 80%
+    width: 80%;
     height: auto;
 }
 
@@ -289,4 +290,105 @@ button {
     #next-ref {
         right: 4px;
     }
+}
+
+/* Compendium */
+.modelList {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.modelList hr {
+    width: calc(100% - 16px);
+    max-width: 800px;
+    margin: 16px 0px;
+}
+
+/* Compendium object */
+
+.objectTitle {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    position:sticky;
+}
+
+.objectTitle h2 {
+    margin: 16px;
+}
+
+.objectContent {
+    display: grid;
+    grid-template-columns: 32vw 60vw;
+    column-gap: 2vw;
+    height: 70vh;
+}
+
+#model-container {
+    max-width: 480px;
+    height: 320px;
+    border-right: 1px solid;
+}
+
+.shopImage {
+    width: 400px;
+    height: auto;
+    max-width: 90%;
+}
+
+.caption{
+    font-style: italic;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+.objectDescription {
+    max-width: 640px;
+    overflow-y: scroll;
+    margin-top: 16px;
+}
+
+.objectDescription p {
+    padding: 8px 0px;
+}
+
+.objectDescription img {
+    padding-left: 16px;
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        margin: 16px 0px 0px 0px;
+    }
+
+    .objectContent {
+        display: flex;
+        flex-direction: column;
+        height: 85dvh;
+
+    }
+
+    #model-container {
+        max-width: none;
+        height: 40dvh;
+        border-right: none;
+        border-bottom: 1px solid;
+    }
+
+    .objectDescription {
+        height: 70dvh;
+        width: auto;
+    }
+
+   .shopImage {
+    width: 95vw;
+    max-width: none;
+   }
+
+   .objectDescription img {
+    padding-left: 0px;
+   }
+
+
+
 }
