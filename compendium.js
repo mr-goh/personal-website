@@ -15,15 +15,26 @@ container.appendChild(renderer.domElement);
 const loader = new GLTFLoader();
 let model;
 
-loader.load('donut.glb', (gltf) => {
-    model = gltf.scene;
-    model.scale.set(12, 12, 12);
-    model.rotateX(Math.PI / 5);
-    scene.add(model);
-    model.position.y -= 1;
-}, undefined, (error) => {
-    console.error(error);
-});
+const modelUrls = ['/donut.glb', '/public/donut.glb'];
+
+function loadModel(urlIndex = 0) {
+    loader.load(modelUrls[urlIndex], (gltf) => {
+        model = gltf.scene;
+        model.scale.set(12, 12, 12);
+        model.rotateX(Math.PI / 5);
+        scene.add(model);
+        model.position.y -= 1;
+    }, undefined, (error) => {
+        if (urlIndex < modelUrls.length - 1) {
+            loadModel(urlIndex + 1);
+            return;
+        }
+
+        console.error(error);
+    });
+}
+
+loadModel();
 
 camera.position.z = 1;
 
