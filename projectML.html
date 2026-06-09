@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Goh</title>
+    <title>ML Energy Model | Jonathan Goh</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -11,15 +11,16 @@
     <nav>
         <a href="/index.html" class="home">JONATHAN GOH</a>
         <div>
+            <a href="/compendium.html">Compendium</a>
             <a href="/projects.html">Projects</a>
-            <a href="documents/cv_UXR_111323.pdf" target="_blank">CV</a>
+            <a href="/documents/cv_UXR_111323.pdf" target="_blank">CV</a>
             <a href="/contact.html">Contact</a>
         </div>
     </nav>
     <main class="projectContent">
         <div class="projectHeader">
             <h2>Predictive ML model for residential energy consumption</h2>
-            <p class="projectSummary">Used big data to build a machine-learning model that predicts building energy consumption using Python and SKLearn. Conducted exploratory data analysis, dimensionality reduction, and model selection using ensemble learning and crossvalidation.
+            <p class="projectSummary">Used big data to build a machine-learning model that predicts building energy consumption using Python and SKLearn. Conducted exploratory data analysis, dimensionality reduction, and model selection using ensemble learning and cross-validation.
             </p>
             <hr>
         </div>
@@ -29,14 +30,14 @@
             <h4>Response variable</h4>
             <p>We picked net energy consumption in kWh as our response variable. This measures the total energy consumption minus the total on-site energy production.</p>
             <p>The top five contributors to electricity consumption are cooling, plugs, heating, interior lighting, and hot water system. A photovoltaic panel helps offset some consumption, but this is very small compared to the overall consumption.</p>
-            <img src="images/machineLearning/response_distribution.png" class="slides">
+            <img src="images/machineLearning/response_distribution.png" class="slides" alt="Distribution of net energy consumption response variable">
             <h4>Predictor variables</h4>
-            <img src="images/machineLearning/predictor_map.png" class="images">
-            <img src="images/machineLearning/predictor_climateZone.png" class="images">
-            <p>The data we have is distributed across the US states, except for Alaska. Most data are in California, Texas, Florida, and New York State. The state with the least data is Wyoming, with 1,106 data points. Most data points are distributed in cold, mixed-humid, and hot-humid climate zone.</p>    
-            <img src="images/machineLearning/predictor_housingType.png" class="slides">
+            <img src="images/machineLearning/predictor_map.png" class="images" alt="Map of data distribution across US states">
+            <img src="images/machineLearning/predictor_climateZone.png" class="images" alt="Data distribution by climate zone">
+            <p>The data we have is distributed across the US states, except for Alaska. Most data are in California, Texas, Florida, and New York State. The state with the least data is Wyoming, with 1,106 data points. Most data points are distributed in cold, mixed-humid, and hot-humid climate zone.</p>
+            <img src="images/machineLearning/predictor_housingType.png" class="slides" alt="Energy consumption by housing type">
             <p>Most homes in the dataset are single-family detached homes. Other types represented in this dataset are mobile homes, multi-family, and single-family attached. In the visualization, we see that multi-family homes tend to consume less net electricity relative to single-family homes. Furthermore, buildings with wooden frames consume less energy than buildings constructed with other materials, except for steel frame buildings with more than 5 units.</p>
-            <img src="images/machineLearning/predictor_cooling.png" class="slides">
+            <img src="images/machineLearning/predictor_cooling.png" class="slides" alt="Energy consumption by cooling system type">
             <p>We know that air conditioning is the building element that consumes the most electricity on average. Buildings with poor efficiency AC systems, such as SEER 8 and heat pumps, tend to consume more electricity than the average.</p>
             <h3>Modeling</h3>
             <h4>Baseline model</h4>
@@ -72,7 +73,7 @@
                 <li>Mean = 0.8097</li>
                 <li>+/-2 standard deviation = [0.8049, 0.8146]</li>
             </ul>
-            <img src="images/machineLearning/treeDepth.png" class="slides">
+            <img src="images/machineLearning/treeDepth.png" class="slides" alt="Chart showing optimal decision tree depth from cross-validation">
             <p>Once we determined our optimal tree depth, we ran the decision tree regression model with a tree depth of 14 on both the training and test datasets, and calculated their accuracy scores.</p>
             <ul>
                 <li>Depth = 14</li>
@@ -97,19 +98,18 @@
                 <li>train_accuracy= 0.9634</li>
                 <li>test_accuracy= 0.8917</li>
             </ul>
-            <img src="images/machineLearning/randomForest.png" class="slides">
+            <img src="images/machineLearning/randomForest.png" class="slides" alt="Random forest feature importance chart">
             <p>We also visualized the feature importance in this model using the mean decrease impurity (MDI). Some important features in this model are building size, heating type, cooling type, vacancy rates, building age, and the number of occupants.</p>
             <h3>Findings</h3>
             <p>We constructed the baseline model using simple linear regression. Despite the relatively high r² score, a model with so many predictors is difficult to interpret. To help with interpretability, we tried reducing the dimensions by checking collinearity and using lasso regularization. These steps help reduce the predictor space while maintaining accuracy, as proven by the negligible decline in r². We also tried checking possible polynomial dimensions in our predictors, but our polynomial model resulted in a lower r² than the baseline. One possible explanation is that we only tried testing a small number of degrees due to our lack of computing power. Further testing with higher polynomial degrees and conducting cross-validation may be needed.</p>
             <p>We discarded the polynomial features in ensemble learning but maintained the reduced dataset from the lasso regularization. Our prediction progressively improves as we move through different ensemble models: decision trees, bagging, and random forest. Across these three models, random forest performs the best. We believe that this is because the model de-correlates dependent trees and handles over-fitting.</p>
-            <p>Finally, we generated a feature importance plot to see which variables contribute the most to the model. Building size as the top predictor is intuitive, as larger buildings require more electricity to operate. Heat types & cooling types are important, but interestingly building temperature baseline (temperature setpoints) is also highly important. Another interesting finding is that buildings without attics require more electricity. This might be explained by the fact that attics help to preserve heat.</p>
+            <p>Finally, we generated a feature importance plot to see which variables contribute the most to the model. Building size as the top predictor is intuitive, as larger buildings require more electricity to operate. Heat types &amp; cooling types are important, but interestingly building temperature baseline (temperature setpoints) is also highly important. Another interesting finding is that buildings without attics require more electricity. This might be explained by the fact that attics help to preserve heat.</p>
             <p>In conclusion, our prediction model seems satisfactory as we yielded a high test accuracy score while managing to reduce dimensionality. We hope that this model can be utilized by end-users, such as homeowners, architects, builders, and local government, to push the agenda of building electrification as a means of built-environment decarbonization. By identifying key predictors, we can help policymakers to optimize energy consumption–including demand response (DR), demand-side management (DSM), pricing policies, and building regulations.</p>
             <h3>Limitations</h3>
-            <p>We acknowledge that our dataset does not contain data from Alaska state. This is something that we cannot help with data pre-processing and engineering, as this is related to the data collection itself. Therefore, this model might not accurately predict electricity usage in Alaska. Furthermore, Alaska’s climate is different than the rest of the country. We need to train a new model to predict electricity consumption in Alaska.</p>
+            <p>We acknowledge that our dataset does not contain data from Alaska state. This is something that we cannot help with data pre-processing and engineering, as this is related to the data collection itself. Therefore, this model might not accurately predict electricity usage in Alaska. Furthermore, Alaska's climate is different than the rest of the country. We need to train a new model to predict electricity consumption in Alaska.</p>
             <p>This dataset also lacks the element of individual behavior. This might be important as it could help address behavioral factors related to energy consumption. This dataset is only limited to residential buildings. Therefore the model is not generalizable to other types of buildings that might be a better target for policy changes. Our model is also limited to the US context only. As different countries have varying geographical conditions, building types, and appliances, we might need to train a different model for each country, given that similar data is available.</p>
             <p>Another caveat in our prediction is that the response variable is not normalized. In the future, we can try predicting net electricity usage per square footage or per capita. This might provide different insights and might help improve interpretability. Wilson et. al conducted a similar simulation in which they translated the outcome variables into monetary values that significantly helps with end-user decision-making process.</p>
         </div>
     </main>
-    
 </body>
 </html>

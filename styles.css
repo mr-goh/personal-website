@@ -1,11 +1,5 @@
-@font-face {
-    font-family: "Circular";
-    src: 
-        local("Circular Std");
-}
-
 html {
-    font-family: 'Circular Std', sans-serif;
+    font-family: 'Outfit', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -22,25 +16,25 @@ h1 {
 h2 {
     font-size: 32px;
     font-weight: bold;
-    margin-left: 16px 
+    margin-left: 16px;
 }
 
 h3 {
     font-size: 24px;
     font-weight: 400;
-    margin: 32px 0px 16px 0px;
+    margin: 32px 0 16px 0;
 }
 
 h4 {
     font-size: 20px;
     font-weight: 200;
-    margin: 24px 0px 16px 16px;
+    margin: 24px 0 16px 16px;
 }
 
 .subtitle {
     font-size: 16px;
     font-weight: bold;
-    margin: 8px 0px 8px 0px;
+    margin: 8px 0;
 }
 
 p {
@@ -59,7 +53,7 @@ ul {
 }
 
 li {
-    margin: 0px 12px 8px 12px;
+    margin: 0 12px 8px 12px;
 }
 
 .year {
@@ -76,11 +70,11 @@ nav {
 nav a {
     font-size: 16px;
     font-weight: 100;
-    margin: 12px 16px 12px 0px;
+    margin: 12px 16px 12px 0;
 }
 
 main {
-    margin: 16px 0px 16px 16px;
+    margin: 16px 0 16px 16px;
 }
 
 .home {
@@ -90,12 +84,12 @@ main {
 }
 
 .landingHeadline {
-    margin: 32vh 0px 0px 16px;
+    margin: 32vh 0 0 16px;
 }
 
 .landingText {
     font-size: 24px;
-    font-weight:lighter;
+    font-weight: lighter;
     animation: 4s fadeIn;
 }
 
@@ -122,7 +116,7 @@ main {
 .projectsList hr {
     width: calc(100% - 16px);
     max-width: 800px;
-    margin: 16px 0px 0px 16px;
+    margin: 16px 0 0 16px;
 }
 
 .projectNameYear {
@@ -134,7 +128,7 @@ main {
 }
 
 .projectNameYear p {
-    margin: 4px 0px 0px 0px;
+    margin: 4px 0 0 0;
 }
 
 .projectTags {
@@ -150,38 +144,44 @@ main {
 }
 
 .projectHeader h2 {
-    margin: 20px 0px 16px 0px;
+    margin: 20px 0 16px 0;
 }
 
 .projectDetails {
-    margin: 0px 0px 9px 0px;
-    overflow-y: scroll;
-    padding: 0px 24px 0px 0px;
+    margin: 0 0 9px 0;
+    overflow-y: auto;
+    padding: 0 24px 0 0;
 }
 
 .appScreen {
     max-width: 16vw;
     height: auto;
-    margin: 0px 24px 0px 0px;
+    margin: 0 24px 0 0;
 }
 
 .slides {
     width: 80%;
     height: auto;
-    margin: 0px 0px 16px 0px;
+    margin: 0 0 16px 0;
 }
 
 .images {
     max-width: 40%;
     height: auto;
     border-radius: 8px;
-    margin: 16px 16px 16px 0px;
+    margin: 16px 16px 16px 0;
+}
+
+.imgRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .wireframes {
     max-width: 30%;
     height: auto;
-    margin: 16px 16px 16px 0px;
+    margin: 16px 16px 16px 0;
     border-radius: 8px;
     border: 1px solid blue;
 }
@@ -241,7 +241,7 @@ button {
 }
 
 .contactHeader {
-    margin: 0px 16px 16px 0px;
+    margin: 0 16px 16px 0;
 }
 
 .contactDetails {
@@ -250,7 +250,7 @@ button {
 }
 
 .contactDetails a {
-    margin: 0px 0px 24px 0px;
+    margin: 0 0 24px 0;
 }
 
 @media screen and (max-width: 480px) {
@@ -259,12 +259,12 @@ button {
         flex-direction: column;
     }
 
-    .projectDetails{
+    .projectDetails {
         height: 70dvh;
     }
 
     .projectDetails h3:first-child {
-        margin: 0px 0px 16px 0px;
+        margin: 0 0 16px 0;
     }
 
     .projectSummary {
@@ -276,17 +276,17 @@ button {
     }
 
     .projectHeader {
-        margin: 0px 16px 16px 0px;
+        margin: 0 16px 16px 0;
     }
 
     .slides {
-        width: 100%
+        width: 100%;
     }
 
     #prev-ref {
         left: 4px;
     }
-    
+
     #next-ref {
         right: 4px;
     }
@@ -302,7 +302,7 @@ button {
 .modelList hr {
     width: calc(100% - 16px);
     max-width: 800px;
-    margin: 16px 0px;
+    margin: 16px 0;
 }
 
 /* Compendium object */
@@ -310,7 +310,7 @@ button {
 .objectTitle {
     border-top: 1px solid;
     border-bottom: 1px solid;
-    position:sticky;
+    position: sticky;
 }
 
 .objectTitle h2 {
@@ -336,20 +336,20 @@ button {
     max-width: 90%;
 }
 
-.caption{
+.caption {
     font-style: italic;
-    margin-top: 0px;
+    margin-top: 0;
     font-size: 12px;
 }
 
 .objectDescription {
     max-width: 640px;
-    overflow-y: scroll;
+    overflow-y: auto;
     margin-top: 16px;
 }
 
 .objectDescription p {
-    padding: 8px 0px;
+    padding: 8px 0;
 }
 
 .objectDescription img {
@@ -358,14 +358,13 @@ button {
 
 @media screen and (max-width: 480px) {
     main {
-        margin: 16px 0px 0px 0px;
+        margin: 16px 0 0 0;
     }
 
     .objectContent {
         display: flex;
         flex-direction: column;
         height: 85dvh;
-
     }
 
     #model-container {
@@ -380,15 +379,12 @@ button {
         width: auto;
     }
 
-   .shopImage {
-    width: 95vw;
-    max-width: none;
-   }
+    .shopImage {
+        width: 95vw;
+        max-width: none;
+    }
 
-   .objectDescription img {
-    padding-left: 0px;
-   }
-
-
-
+    .objectDescription img {
+        padding-left: 0;
+    }
 }

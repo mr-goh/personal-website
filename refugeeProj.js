@@ -1,21 +1,25 @@
-// Refugee chart carousel
+function createCarousel(images, prevId, nextId, imgId) {
+    let index = 0;
+    const img = document.getElementById(imgId);
 
-const imagesRef = ["images/refugeeIntegration/percentageSpend.png", "images/refugeeIntegration/spendIncome.png", "images/refugeeIntegration/spendHousing.png"];
-indexRef = 0;
+    document.getElementById(prevId).addEventListener("click", () => {
+        if (index > 0) {
+            img.src = images[--index];
+        }
+    });
 
-const prevRef = document.getElementById("prev-ref");
-const nextRef = document.getElementById("next-ref");
+    document.getElementById(nextId).addEventListener("click", () => {
+        if (index < images.length - 1) {
+            img.src = images[++index];
+        }
+    });
+}
 
-prevRef.addEventListener("click", () => {
-    if (indexRef > 0) {
-        indexRef -=1;
-        document.getElementById("image-ref").src = imagesRef[indexRef];
-    }
-});
-
-nextRef.addEventListener("click", () => {
-    if (indexRef < 2) {
-        indexRef +=1;
-        document.getElementById("image-ref").src = imagesRef[indexRef];
-    }
-});
+createCarousel(
+    [
+        '/images/refugeeIntegration/percentageSpend.png',
+        '/images/refugeeIntegration/spendIncome.png',
+        '/images/refugeeIntegration/spendHousing.png',
+    ],
+    'prev-ref', 'next-ref', 'image-ref'
+);
