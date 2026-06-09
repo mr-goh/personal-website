@@ -140,7 +140,8 @@ main {
     display: grid;
     grid-template-columns: 24vw 70vw;
     column-gap: 4vw;
-    height: 90vh;
+    height: calc(100dvh - 112px);
+    min-height: 0;
 }
 
 .projectHeader h2 {
@@ -150,7 +151,9 @@ main {
 .projectDetails {
     margin: 0 0 9px 0;
     overflow-y: auto;
-    padding: 0 24px 0 0;
+    padding: 0 24px 56px 0;
+    box-sizing: border-box;
+    min-height: 0;
 }
 
 .appScreen {
@@ -257,10 +260,14 @@ button {
     .projectContent {
         display: flex;
         flex-direction: column;
+        height: calc(100dvh - 80px);
+        min-height: 0;
     }
 
     .projectDetails {
-        height: 70dvh;
+        flex: 1;
+        height: auto;
+        padding: 0 16px 64px 0;
     }
 
     .projectDetails h3:first-child {
