@@ -54,7 +54,7 @@ npm run check
 
 ## Assets and Deployment
 
-Import images used by JavaScript so Vite includes them in the build. Plain strings such as `/images/example.png` in JavaScript do not cause Vite to copy a file. Files that need a stable public URL belong in `public/`: for example, `public/documents/cv_UXR_111323.pdf` is served at `/documents/cv_UXR_111323.pdf`.
+Import images used by JavaScript so Vite includes them in the build. Plain strings such as `/images/example.png` in JavaScript do not cause Vite to copy a file. Files that need a stable public URL belong in `public/`: for example, `public/documents/cv_analyst_100626.pdf` is served at `/documents/cv_analyst_100626.pdf`.
 
 GitHub Pages must use **GitHub Actions** as its publishing source. The workflow validates and builds pull requests; successful pushes to `main` publish only the generated `dist/` folder. Do not publish the repository root or edit `dist/` by hand.
 

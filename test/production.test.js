@@ -44,7 +44,7 @@ for (const page of pages) {
 }
 
 test('The published CV and model contain real file data', async () => {
-    const cv = await readFile(resolve(output, 'documents/cv_UXR_111323.pdf'));
+    const cv = await readFile(resolve(output, 'documents/cv_analyst_100626.pdf'));
     assert.equal(cv.subarray(0, 5).toString(), '%PDF-');
     const model = await readFile(resolve(output, 'donut.glb'));
     assert.equal(model.subarray(0, 4).toString(), 'glTF');
