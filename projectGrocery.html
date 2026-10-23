@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Grocery Transport | Jonathan Goh</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
 </head>
 <body class="projectBody">
-    <nav>
+    <nav aria-label="Primary">
         <a href="/index.html" class="home">JONATHAN GOH</a>
         <div>
             <a href="/compendium.html">Compendium</a>
             <a href="/projects.html">Projects</a>
-            <a href="/documents/cv_UXR_111323.pdf" target="_blank">CV</a>
+            <a href="/documents/cv_UXR_111323.pdf" target="_blank" rel="noopener noreferrer">CV</a>
             <a href="/contact.html">Contact</a>
         </div>
     </nav>
     <main class="projectContent">
         <div class="projectHeader">
-            <h2>Improving grocery transport for urban pedestrians</h2>
+            <h1 class="pageTitle">Improving grocery transport for urban pedestrians</h1>
             <p class="projectSummary">Worked on a cross-functional team through an end-to-end product development process to solve the problem of grocery transport for urban trekkers.</p>
             <hr>
             <div class="team">
-                <h4>Team</h4>
+                <h2 class="subsectionTitle">Team</h2>
                 <p>Myself (User researcher)</p>
                 <p>Saman (MBA)</p>
                 <p>Rui (Designer)</p>
@@ -31,39 +31,39 @@
                 <p>Brandon (Engineer)</p>
             </div>
         </div>
-        <div class="projectDetails">
-            <h3>Background</h3>
-            <img src="/images/groceryTransport/problemStats.png" class="slides" alt="Statistics on grocery transport challenges for urban pedestrians">
-            <h3>Problem</h3>
+        <section class="projectDetails" tabindex="0" aria-label="Project details">
+            <h2 class="sectionTitle">Background</h2>
+            <img src="/images/groceryTransport/problemStats.png" class="slides" alt="Statistics on grocery transport challenges for urban pedestrians" width="960" height="540" loading="lazy" decoding="async">
+            <h2 class="sectionTitle">Problem</h2>
             <p>Our team set out to solve the problem of grocery transport for people who do not use a car to get to and from the grocery store.</p>
-            <h3>User Research</h3>
-            <img src="/images/groceryTransport/userNeeds.png" class="slides" alt="User needs identified from research">
-            <h3>Ideation</h3>
-            <div class="carousel-container">
-                <button id="arrow-prev" aria-label="Previous ideation concept">&#8249;</button>
-                <img class="images" id="carousel-image" src="/images/groceryTransport/robustWheels.jpeg" alt="Ideation concept: robust wheels">
-                <button id="arrow-next" aria-label="Next ideation concept">&#8250;</button>
+            <h2 class="sectionTitle">User Research</h2>
+            <img src="/images/groceryTransport/userNeeds.png" class="slides" alt="User needs identified from research" width="1588" height="812" loading="lazy" decoding="async">
+            <h2 class="sectionTitle">Ideation</h2>
+            <div class="carousel-container" role="group" aria-roledescription="carousel" aria-label="Ideation concepts">
+                <button type="button" id="arrow-prev" aria-label="Previous ideation concept">&#8249;</button>
+                <img class="images" id="carousel-image" src="/images/groceryTransport/robustWheels.jpeg" alt="Ideation concept: robust wheels" width="1600" height="1118" loading="lazy" decoding="async">
+                <button type="button" id="arrow-next" aria-label="Next ideation concept">&#8250;</button>
             </div>
-            <h3>Prototyping</h3>
-            <h4>Prototype 1</h4>
-                <img src="/images/groceryTransport/prototype.png" class="images" alt="First prototype design">
-                <div>
-                    <img src="/images/groceryTransport/prototypeTest.jpeg" class="images" alt="Testing the first prototype">
-                    <img src="/images/groceryTransport/prototypeTest2.jpeg" class="images" alt="Second test of the first prototype">
-                </div>
-            <h4>Prototype 2</h4>
-            <div class="carousel-container">
-                <button id="prev-p2" aria-label="Previous prototype 2 image">&#8249;</button>
-                <img src="/images/groceryTransport/prototype2.png" class="images" id="image-p2" alt="Second prototype design">
-                <button id="next-p2" aria-label="Next prototype 2 image">&#8250;</button>
+            <h2 class="sectionTitle">Prototyping</h2>
+            <h3 class="subsectionTitle">Prototype 1</h3>
+            <img src="/images/groceryTransport/prototype.png" class="images" alt="First prototype design" width="1124" height="470" loading="lazy" decoding="async">
+            <div>
+                <img src="/images/groceryTransport/prototypeTest.jpeg" class="images" alt="Testing the first prototype" width="1536" height="2048" loading="lazy" decoding="async">
+                <img src="/images/groceryTransport/prototypeTest2.jpeg" class="images" alt="Second test of the first prototype" width="1536" height="2048" loading="lazy" decoding="async">
             </div>
-            <h3>Design</h3>
-            <div class="carousel-container">
-                <button id="prev-final" aria-label="Previous final design image">&#8249;</button>
-                <img src="/images/groceryTransport/finalCart.png" class="images" id="image-final" alt="Final cart design">
-                <button id="next-final" aria-label="Next final design image">&#8250;</button>
+            <h3 class="subsectionTitle">Prototype 2</h3>
+            <div class="carousel-container" role="group" aria-roledescription="carousel" aria-label="Second prototype">
+                <button type="button" id="prev-p2" aria-label="Previous prototype 2 image">&#8249;</button>
+                <img src="/images/groceryTransport/prototype2.png" class="images" id="image-p2" alt="Second prototype design" width="512" height="384" loading="lazy" decoding="async">
+                <button type="button" id="next-p2" aria-label="Next prototype 2 image">&#8250;</button>
             </div>
-        </div>
+            <h2 class="sectionTitle">Design</h2>
+            <div class="carousel-container" role="group" aria-roledescription="carousel" aria-label="Final cart design">
+                <button type="button" id="prev-final" aria-label="Previous final design image">&#8249;</button>
+                <img src="/images/groceryTransport/finalCart.png" class="images" id="image-final" alt="Final cart design" width="960" height="540" loading="lazy" decoding="async">
+                <button type="button" id="next-final" aria-label="Next final design image">&#8250;</button>
+            </div>
+        </section>
     </main>
     <script type="module" src="/script.js"></script>
 </body>

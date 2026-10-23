@@ -4,28 +4,30 @@ html {
 }
 
 .projectBody {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 16px);
+    height: calc(100dvh - 16px);
     overflow: hidden;
 }
 
-h1 {
-    font-size: 16px;
-    font-weight: 400;
-    margin: 8px 12px;
+.projectBody > nav {
+    flex-shrink: 0;
 }
 
-h2 {
+.pageTitle {
     font-size: 32px;
     font-weight: bold;
-    margin-left: 16px;
+    margin: 0.83em 0 0.83em 16px;
 }
 
-h3 {
+.sectionTitle {
     font-size: 24px;
     font-weight: 400;
     margin: 32px 0 16px 0;
 }
 
-h4 {
+.subsectionTitle {
     font-size: 20px;
     font-weight: 200;
     margin: 24px 0 16px 16px;
@@ -35,6 +37,16 @@ h4 {
     font-size: 16px;
     font-weight: bold;
     margin: 8px 0;
+}
+
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
 
 p {
@@ -137,14 +149,20 @@ main {
 }
 
 .projectContent {
+    flex: 1;
     display: grid;
     grid-template-columns: 24vw 70vw;
     column-gap: 4vw;
-    height: calc(100dvh - 112px);
+    margin-bottom: 12px;
     min-height: 0;
 }
 
-.projectHeader h2 {
+.projectHeader {
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.projectHeader .pageTitle {
     margin: 20px 0 16px 0;
 }
 
@@ -154,6 +172,7 @@ main {
     padding: 0 24px 56px 0;
     box-sizing: border-box;
     min-height: 0;
+    min-width: 0;
 }
 
 .appScreen {
@@ -196,7 +215,7 @@ main {
     justify-content: space-around;
 }
 
-button {
+.carousel-container button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -206,39 +225,16 @@ button {
     cursor: pointer;
 }
 
-#arrow-prev {
-    left: 10%;
-}
-
-#arrow-next {
-    right: 10%;
-}
-
-#carousel-img {
-    width: 80%;
-    height: auto;
-}
-
-#prev-p2 {
-    left: 10%;
-}
-
-#next-p2 {
-    right: 10%;
-}
-
-#prev-final {
-    left: 10%;
-}
-
-#next-final {
-    right: 10%;
-}
-
+#arrow-prev,
+#prev-p2,
+#prev-final,
 #prev-ref {
     left: 10%;
 }
 
+#arrow-next,
+#next-p2,
+#next-final,
 #next-ref {
     right: 10%;
 }
@@ -256,11 +252,17 @@ button {
     margin: 0 0 24px 0;
 }
 
+@media screen and (min-width: 481px) and (max-width: 1199px) {
+    .projectContent {
+        grid-template-columns: 24vw minmax(0, 1fr);
+    }
+}
+
 @media screen and (max-width: 480px) {
     .projectContent {
         display: flex;
         flex-direction: column;
-        height: calc(100dvh - 80px);
+        margin: 16px 0 12px;
         min-height: 0;
     }
 
@@ -270,7 +272,7 @@ button {
         padding: 0 16px 64px 0;
     }
 
-    .projectDetails h3:first-child {
+    .projectDetails .sectionTitle:first-child {
         margin: 0 0 16px 0;
     }
 
@@ -283,6 +285,7 @@ button {
     }
 
     .projectHeader {
+        flex-shrink: 0;
         margin: 0 16px 16px 0;
     }
 
@@ -317,10 +320,9 @@ button {
 .objectTitle {
     border-top: 1px solid;
     border-bottom: 1px solid;
-    position: sticky;
 }
 
-.objectTitle h2 {
+.objectTitle .pageTitle {
     margin: 16px;
 }
 
@@ -335,6 +337,10 @@ button {
     max-width: 480px;
     height: 320px;
     border-right: 1px solid;
+}
+
+#model-container canvas {
+    display: block;
 }
 
 .shopImage {
@@ -393,5 +399,15 @@ button {
 
     .objectDescription img {
         padding-left: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .landingText {
+        animation: none;
     }
 }

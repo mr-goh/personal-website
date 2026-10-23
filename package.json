@@ -1,13 +1,27 @@
 {
+  "name": "jonathan-goh-portfolio",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.8.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . && html-validate '*.html'",
+    "test": "node --test",
+    "check": "npm run lint && npm run build && npm test"
   },
   "dependencies": {
-    "three": "^0.160.1"
+    "three": "0.160.1"
   },
   "devDependencies": {
-    "vite": "^5.2.8"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "html-validate": "^11.17.0",
+    "parse5": "^8.0.1",
+    "vite": "^8.3.5"
   }
 }

@@ -4,34 +4,26 @@
     <meta charset="utf-8">
     <title>A Donut | Jonathan Goh</title>
     <link rel="stylesheet" href="/styles.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "https://unpkg.com/three@0.160.1/build/three.module.js",
-                "three/addons/": "https://unpkg.com/three@0.160.1/examples/jsm/"
-            }
-        }
-    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
+    <nav aria-label="Primary">
         <a href="/index.html" class="home">JONATHAN GOH</a>
         <div>
             <a href="/compendium.html">Compendium</a>
             <a href="/projects.html">Projects</a>
-            <a href="/documents/cv_UXR_111323.pdf" target="_blank">CV</a>
+            <a href="/documents/cv_UXR_111323.pdf" target="_blank" rel="noopener noreferrer">CV</a>
             <a href="/contact.html">Contact</a>
         </div>
     </nav>
     <main>
         <div class="objectTitle">
-            <h2>A DONUT</h2>
+            <h1 class="pageTitle">A DONUT</h1>
         </div>
         <div class="objectContent">
             <div id="model-container"></div>
-            <div class="objectDescription">
+            <section class="objectDescription" tabindex="0" aria-label="The story of the donut">
                 <p>
                     I needed to start with a donut, because for me everything starts with a donut.
                 </p>
@@ -39,7 +31,7 @@
                     After my mom and her family fled the genocide in Cambodia, they arrived in the U.S as refugees with little besides the clothes on their backs. My grandma worked a lot of below-minimum-wage jobs, and over time she saved up enough money to start her own donut shop. She called it "Danny's Donuts". There was no one in my family named "Danny" and we didn't know any "Dannys", but she gave it an American-sounding name to attract customers.
                 </p>
                 <div>
-                    <img class="shopImage" src="/images/donutShop.jpeg" alt="Danny's Donuts, my grandmother's donut shop">
+                    <img class="shopImage" src="/images/donutShop.jpeg" alt="Danny's Donuts, my grandmother's donut shop" width="2179" height="1783" loading="lazy" decoding="async">
                     <p class="caption">Danny's Donuts</p>
                 </div>
 
@@ -64,7 +56,7 @@
                 <p>
                     I graduated knowing there will forever be a 3D model of a donut somewhere in the MIT Archive.
                 </p>
-            </div>
+            </section>
         </div>
     </main>
     <script type="module" src="/compendium.js"></script>

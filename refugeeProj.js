@@ -1,25 +1,13 @@
-function createCarousel(images, prevId, nextId, imgId) {
-    let index = 0;
-    const img = document.getElementById(imgId);
-
-    document.getElementById(prevId).addEventListener("click", () => {
-        if (index > 0) {
-            img.src = images[--index];
-        }
-    });
-
-    document.getElementById(nextId).addEventListener("click", () => {
-        if (index < images.length - 1) {
-            img.src = images[++index];
-        }
-    });
-}
+import { createCarousel } from './carousel.js';
+import percentageSpend from './images/refugeeIntegration/percentageSpend.png';
+import spendIncome from './images/refugeeIntegration/spendIncome.png';
+import spendHousing from './images/refugeeIntegration/spendHousing.png';
 
 createCarousel(
     [
-        '/images/refugeeIntegration/percentageSpend.png',
-        '/images/refugeeIntegration/spendIncome.png',
-        '/images/refugeeIntegration/spendHousing.png',
+        { src: percentageSpend, alt: 'Chart showing percentage of spending by category' },
+        { src: spendIncome, alt: 'Chart showing spending by income' },
+        { src: spendHousing, alt: 'Chart showing spending by housing type' },
     ],
     'prev-ref', 'next-ref', 'image-ref'
 );

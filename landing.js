@@ -1,16 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const el = document.getElementById("landingIntro");
-    if (!el) return;
+const heading = document.getElementById('landingIntro');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-    const txt = "Hi, I'm Jonathan.";
-    let i = 0;
+if (heading && !reducedMotion.matches) {
+    const text = heading.textContent;
+    let index = 0;
+    let timer;
+    heading.textContent = '';
 
     function typeWriter() {
-        if (i < txt.length) {
-            el.textContent += txt[i++];
-            setTimeout(typeWriter, 50);
-        }
+        heading.textContent = text.slice(0, ++index);
+        if (index < text.length) timer = window.setTimeout(typeWriter, 50);
     }
 
+    reducedMotion.addEventListener('change', () => {
+        if (reducedMotion.matches) {
+            window.clearTimeout(timer);
+            heading.textContent = text;
+        }
+    });
+
     typeWriter();
-});
+}
